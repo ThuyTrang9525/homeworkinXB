@@ -1,0 +1,32 @@
+# ==========================================
+# 1. KHÔNG ĐẨY THƯ MỤC PLUGIN NỀN (Làm nặng Git)
+# ==========================================
+.terraform/
+
+# ==========================================
+# 2. KHÔNG ĐẨY FILE TRẠNG THÁI HẠ TẦNG (Cực kỳ nhạy cảm!)
+# ==========================================
+# File này chứa toàn bộ thông tin bí mật về hạ tầng AWS của bạn, tuyệt đối không lên Git
+terraform.tfstate
+terraform.tfstate.backup
+*.tfstate
+*.tfstate.backup
+
+# ==========================================
+# 3. KHÔNG ĐẨY FILE CHỨA BIẾN BÍ MẬT (Mật khẩu, Key, Token)
+# ==========================================
+# Các file dùng để điền giá trị cho biến bí mật lúc chạy apply
+*.tfvars
+*.tfvars.json
+
+# ==========================================
+# 4. CÁC FILE RÁC, FILE LOG KHI CHẠY LỆNH LỖI
+# ==========================================
+crash.log
+crash.*.log
+*.txt
+*.log
+
+# File cấu hình riêng của các công cụ quét bảo mật (nếu có)
+.tfsec/
+.checkov/
